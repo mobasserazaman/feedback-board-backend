@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    environment:
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGDATABASE=feedbackdb
+      - PGHOST=db
+      - PGPORT=5432
+    command: sh -c "psql -h db -U postgres -d feedbackdb -f init.sql && node index.js"
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: feedbackdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
