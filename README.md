@@ -19,6 +19,6 @@ This is the backend for the **Quick Feedback Board** app, built with **Express.j
 - pg (PostgreSQL client)
 
 ## 🛠️ Setup
-
+```bash
 # docker command to start the backend and postgres containers
 docker-compose up
