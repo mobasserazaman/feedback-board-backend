@@ -13,7 +13,7 @@ services:
       - PGDATABASE=feedbackdb
       - PGHOST=db
       - PGPORT=5432
-    command: sh -c "psql -h db -U postgres -d feedbackdb -f init.sql && node index.js"
+    command: sh -c "psql -h db -U postgres -d feedbackdb -f ./init.sql && node index.js"
 
   db:
     image: postgres:15

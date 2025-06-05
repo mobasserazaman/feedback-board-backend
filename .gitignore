@@ -1,0 +1,21 @@
+# Node
+node_modules/
+dist/
+.env
+*.log
+
+# Docker
+pgdata/
+*.pid
+
+# System
+.DS_Store
+.vscode/
+*.swp
+
+# Logs
+logs/
+*.log
+
+# Build
+build/
