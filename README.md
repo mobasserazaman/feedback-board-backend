@@ -1,9 +1,4 @@
 
----
-
-### 📁 `backend/README.md` (Express + PostgreSQL + Docker)
-
-```markdown
 # Quick Feedback Board – Backend
 
 This is the backend for the **Quick Feedback Board** app, built with **Express.js** and **PostgreSQL**, and containerized using **Docker**.
